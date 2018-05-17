@@ -1,43 +1,42 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
-class Blink extends Component {
-  constructor(props){
-    super(props);
-    this.state = { showText: true };
+export default class TextInANest extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            titleText: "Bird's Nest",
+            bodyText: 'This is not really a bird nest.'
+        };
+    }
 
-    setInterval(()=> {
-      this.setState(previousState => {
-        return { showText: !previousState.showText };
-      });
-    }, 1000);
-  }
-  render(){
-    let display = this.state.showText ? this.props.text : ' ';
-    return(
-        <Text>{display}</Text>
-    )
-  }
-}
+    onPressTitle(){
+        alert('翻牌了！')
+        console.log('翻牌了')
+    }
 
-export default class BlinkApp extends Component {
-  render() {
-    return (
-        <View style={styles.container}>
-          <Blink text='I love to blink' />
-          <Blink text='Yes blinking is so great' />
-          <Blink text='Why did they ever take this out of HTML' />
-          <Blink text='Look at me look at me look at me' />
-        </View>
-    );
-  }
+    render() {
+        return (
+            <Text style={styles.baseText}>
+                <Text style={styles.titleText}>
+                    {this.state.titleText}{'\n'}{'\n'}
+                </Text>
+                <Text numberOfLines={5} onPress={this.onPressTitle}>
+                    {this.state.bodyText}
+                </Text>
+            </Text>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+    baseText: {
+        fontFamily: 'serif',//字体
+        marginTop:100,
+        marginLeft:100,
+    },
+    titleText: {
+        fontSize: 20,
+        fontWeight: 'bold',
     },
 });
