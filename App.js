@@ -5,7 +5,7 @@ const LoginView = require('./components/LoginView');
 
 export default class first extends Component {
     render() {
-         return <BagView />
-     /*   return <LoginView />*/
+     /*    return <BagView />*/
+        return <LoginView />
     }
 }
