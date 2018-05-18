@@ -1,10 +1,10 @@
 
 import React, {Component} from 'react';
 
-const MyScrollView = require('./components/MyScrollView');
+const BannerView = require('./components/BannerView');
 
 export default class first extends Component {
     render() {
-        return <MyScrollView/>
+        return <BannerView />
     }
 }

@@ -1,0 +1,24 @@
+{
+  "data":[
+    {
+      "icon" : "img01",
+      "title" : "单肩包"
+    },
+    {
+      "icon" : "img02",
+      "title" : "链条包"
+    },
+    {
+      "icon" : "img03",
+      "title" : "钱包"
+    },
+    {
+      "icon" : "img04",
+      "title" : "手提包"
+    },
+    {
+      "icon" : "img05",
+      "title" : "双肩包"
+    }
+  ]
+}
