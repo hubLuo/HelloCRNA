@@ -11,11 +11,9 @@ class HomeScreen extends React.Component {
         )
     }
 }
-
+//简写方式
 const RootStack = createStackNavigator({
-    Home: {
-        screen: HomeScreen
-    }
+    Home: HomeScreen
 });
 
 export default class App extends React.Component {
