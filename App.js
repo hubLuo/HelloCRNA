@@ -1,10 +1,10 @@
 
 import React, {Component} from 'react';
 
-const BannerView = require('./components/BannerView');
+const MyFlatList = require('./components/MyFlatList');
 
 export default class first extends Component {
     render() {
-        return <BannerView />
+        return <MyFlatList />
     }
 }
