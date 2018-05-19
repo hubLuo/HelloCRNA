@@ -26,8 +26,8 @@ class DetailsScreen extends React.Component {
                     onPress={()=> this.props.navigation.navigate('Home')}
                 />
                 <Button
-                    title="本页自身跳转到Details无效"
-                    onPress={()=> this.props.navigation.navigate('Details')}
+                    title="跳转到Details自身页"
+                    onPress={()=> {console.log(this.props.navigation);this.props.navigation.push('Details')}}
                 />
             </View>
         );
